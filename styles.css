@@ -1,0 +1,978 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.black-header {
+  background-color: black;
+  text-align: center;
+  /* Ändere diesen Wert nach Bedarf für den Abstand um das Bild */
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+}
+
+.black-header img {
+  max-width: 100%; /* Damit das Bild responsiv bleibt und sich der Bildschirmgröße anpasst */
+  height: auto;
+  border-radius: 8px; /* Runde Ecken für das Bild, falls gewünscht */
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.black-header img {
+  float: left;
+  margin-left: 20px;
+}
+
+.header-text {
+  color: white;
+  text-align: left;
+  margin-top: 35px;
+  margin-left: 200px;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.full-width-image {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.full-width-image .image {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-image: url(DesktopBild2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.full-width-image .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px; /* Ändere diesen Wert nach Bedarf für die Höhe des farblosen Übergangs */
+  background: linear-gradient(
+    transparent,
+    white
+  ); /* Hier wird ein Übergang von Weiß nach transparent erstellt */
+  bottom: 0;
+  z-index: 2;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 55%;
+  left: 20px; /* oder einen anderen Wert nach Bedarf anpassen */
+  transform: translateY(-100%);
+  background: transoarent(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  padding: 20px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0); /* Optional: Schatten für den Textbereich */
+  z-index: 2;
+}
+.image-overlay h2 {
+  margin: 0;
+  font-size: 50px;
+  color: black;
+}
+
+.button-container {
+  position: static;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-wrapper {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.transparent-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  position: static;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.transparent-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.conatainer-roastinfo {
+  display: block;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  /*margin-top: 120px;  Ändere diesen Wert nach Bedarf für den gewünschten Abstand */
+  text-align: left; /* Zentriere den Text, wenn gewünscht */
+  margin-left: 20px;
+  font-size: 50px;
+}
+
+.text-container p {
+  width: 120px;
+  font-size: 50px; /* Ändere diesen Wert nach Bedarf für die Schriftgröße des Textes */
+  color: black; /* Ändere diesen Wert nach Bedarf für die Textfarbe */
+  word-spacing: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.numberone-text-container {
+  display: inline-block;
+  font-size: 60px; /* Ändere diesen Wert nach Bedarf für die Schriftgröße des Textes */
+  text-align: left; /* Zentriere den Text, wenn gewünscht */
+  margin-left: 35px;
+}
+
+.numberone-text-container p {
+  font-size: 50px;
+  color: black;
+  word-spacing: 10px;
+  margin-bottom: 1opx;
+}
+
+.numbertwo-text-container {
+  display: inline-block;
+  text-align: left; /* Zentriere den Text, wenn gewünscht */
+  margin-left: 35px;
+  font-size: 50px;
+}
+
+.numbertwo-text-container p {
+  font-size: 50px;
+  color: black;
+  word-spacing: 10px;
+  margin-bottom: 80px;
+  margin-top: 10px;
+}
+
+.second-text {
+  font-family: "Deine zweite Schrift", verdana;
+  font-size: 30px; /* Beispielgröße, anpassen nach Bedarf */
+  color: black; /* Beispiel-Farbe, anpassen nach Bedarf */
+  font-weight: lighter;
+  word-spacing: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.second-text p {
+  margin-right: 40px;
+  width: 120px;
+}
+
+/* Neuer Bereich für weiteren Inhalt unter dem Bild */
+.content-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 20px;
+  font-family: Verdana;
+  color: #575757;
+}
+.centered-image-container {
+  text-align: center; /* Zentriert Block-Elemente innerhalb der Content-Box */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.centered-image {
+  display: block; /* Macht das Bild zu einem Block-Element */
+  margin: 0 auto; /* Zentriert das Block-Element horizontal */
+  /*hier war mal 600px drunter*/
+  width: 600px;
+}
+.second-text-container p {
+  font-size: 20px; /* Stile für den zweiten Textcontainer */
+  color: #575757;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-family: Verdana;
+}
+
+.third-text-container p {
+  font-size: 20px; /* Stile für den zweiten Textcontainer */
+  color: #575757;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-family: Verdana;
+}
+.third-text-container h2 {
+  font-size: 30px; /* Beispiel für die Schriftgröße, anpassen nach Bedarf */
+  color: #575757; /* Beispiel für die Schriftfarbe, anpassen nach Bedarf */
+  font-weight: lighter;
+  margin-left: 20px;
+}
+.fourth-text-container h2 {
+  font-size: 30px; /* Beispiel für die Schriftgröße, anpassen nach Bedarf */
+  color: #575757; /* Beispiel für die Schriftfarbe, anpassen nach Bedarf */
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+.fourth-text-container p {
+  font-size: 20px; /* Stile für den zweiten Textcontainer */
+  color: #575757;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-family: Verdana;
+}
+
+.custom-image-container {
+  position: relative;
+  text-align: center; /* Zentriert Block-Elemente innerhalb der Content-Box */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.hover-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00f;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Stellt sicher, dass der Button über dem Bild schwebt */
+}
+
+.popup-content {
+  position: absolute;
+  /* top: 0;
+    right: -200px; */
+  /* top: 50%;
+    left: 50%; */
+
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.click-button {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  padding: 6px;
+  width: 6px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 11px rgba(0, 0, 0, 0.5);
+}
+.center-dot {
+  display: inline-block;
+  width: 10px; /* Ändere die Breite des Punkts nach Bedarf */
+  height: 10px; /* Ändere die Höhe des Punkts nach Bedarf */
+  background-color: #fff;
+  border-radius: 50%; /* Macht den Punkt rund */
+  margin-top: -30px;
+  margin-bottom: 5px;
+  margin-right: 30px;
+  margin-left: -2px;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px; /* Beispiel für die Breite des Overlays, anpassen nach Bedarf */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 102px;
+  z-index: 2;
+}
+
+.overlay-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 20px; /* Reduziere die Breite der Pfeile */
+  height: 20px;
+}
+.overlay-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.first-text-container h3 {
+  font-size: 50px; /* Stile für den zweiten Textcontainer */
+  color: black;
+  padding: 20px;
+  /*hier war mal 600px drunter*/
+  width: 100%;
+  font-weight: lighter;
+  margin-top: 200px;
+}
+
+.centered-image-fourth-image {
+  margin-top: -100px;
+  width: 300px;
+}
+
+.kaufpreis-text-container {
+  font-family: Verdana;
+  color: #575757;
+  margin-top: -110px;
+  position: relative;
+  text-align: center;
+}
+
+.preis-text-container {
+  color: black;
+  text-align: center;
+  position: relative;
+  font-size: 40px;
+  margin-top: -30px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% der Bildschirmhöhe */
+}
+
+.call-to-action-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #3498db; /* Hellblaue Farbe */
+  background-color: #3498db; /* Hellblaue Farbe */
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  font-size: 16px;
+  bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action-button:hover {
+  background-color: rgb(34, 72, 150);
+  border-color: rgb(34, 72, 150);
+}
+
+.second-text-container h3 {
+  font-size: 50px; /* Stile für den zweiten Textcontainer */
+  color: black;
+  padding: 20px;
+  /*width: 600px;*/
+  font-weight: lighter;
+}
+
+/* Deine vorhandenen Stile hier */
+
+/* Deine vorhandenen Stile hier */
+.review-box {
+  padding: 20px;
+  margin: 10px;
+  background-color: transparent;
+  border: 0.75px solid grey;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 10px grey;
+  width: 300px;
+}
+
+.swiper-container {
+  width: 10%;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.swiper-pagination {
+  position: relative;
+  margin-left: 50%;
+
+  transform: translateX(-50%);
+  margin-top: 100px;
+  margin-bottom: 100px; /* Du könntest auch margin-bottom: 20px; verwenden */
+}
+
+.swiper-pagination-bullet {
+  background-color: #575757; /* Ändere die Farbe nach Bedarf */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px; /* Reduziere die Schriftgröße der Pfeile */
+  color: black;
+  background-color: white;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px; /* Reduziere die Breite der Pfeile */
+  height: 40px; /* Reduziere die Höhe der Pfeile */
+  margin: 0 -450px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Leichter Schatten */
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: rgb(104, 103, 103); /* Ändere die Farbe nach Bedarf */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "▶"; /* ▶ für den nächsten Pfeil, ◀ für den vorherigen Pfeil */
+  font-size: 14px; /* Ändere die Schriftgröße der Pfeile */
+  color: black;
+}
+.swiper-button-prev::after {
+  content: "◀";
+  font-size: 14px;
+  color: black;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Media Query für die mobile Ansicht 
+@media only screen and (max-width: 600px) {
+    .image-overlay {
+        position: static;
+        text-align: center;
+        background: none;
+        padding: 10px;
+       
+        bottom: 0; 
+    }
+*/
+.image-overlay h2 {
+  font-size: 70px;
+
+  font-weight: lighter;
+}
+
+/*}*/
+
+footer {
+  position: relative;
+  background-color: black;
+  color: black;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+  margin-top: 170px;
+  padding: 20px 0px 50px 0px;
+}
+
+.right-aligned-text {
+  color: gray;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-top: 10px;
+}
+.white-bottom-line {
+  border-bottom: 1px solid white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.copyright-text {
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.first-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.second-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.third-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.fourth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.fifth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.sixth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.seventh-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.eigth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.ninth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.tenth-footer-text {
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.feedback .slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feedback .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.feedback .slide {
+  display: inline-block;
+  flex: 0 0 400px;
+  height: 200px;
+}
+
+.feedback .slide-card {
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border: 0.75px solid grey;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 10px grey;
+}
+
+.feedback .first-slide {
+  margin-left: calc(50% - 200px);
+}
+
+.feedback .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.feedback .indicators {
+  display: flex;
+}
+
+.feedback input[type="radio"] {
+  display: none;
+}
+
+.feedback input[type="radio"] + label {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #999;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.feedback input[type="radio"]:checked + label {
+  background-color: #333;
+}
+.feedback .prev,
+.feedback .next {
+  font-size: 14px; /* Reduziere die Schriftgröße der Pfeile */
+  color: black;
+  background-color: white;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px; /* Reduziere die Breite der Pfeile */
+  height: 40px; /* Reduziere die Höhe der Pfeile */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Leichter Schatten */
+}
+.feedback .next:active,
+.feedback .prev:active {
+  background-color: rgb(104, 103, 103); /* Ändere die Farbe nach Bedarf */
+}
+.feedback .next:after {
+  content: "▶"; /* ▶ für den nächsten Pfeil, ◀ für den vorherigen Pfeil */
+  font-size: 14px; /* Ändere die Schriftgröße der Pfeile */
+  color: black;
+}
+.feedback .prev::after {
+  content: "◀";
+  font-size: 14px;
+  color: black;
+}
+
+.feedback .next:active,
+.feedback .prev:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.feedback .next {
+  margin-left: 50px;
+  margin-bottom: 4px;
+}
+.feedback .prev {
+  margin-right: 50px;
+  margin-bottom: 4px;
+}
+
+/* Media Query für Smartphones (z. B. bis 600px Breite) */
+@media screen and (max-width: 600px) {
+  .black-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 60px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    align-content: center; /* Füge diese Zeile hinzu, um den Float zu entfernen */
+  }
+
+  .header-text h1 {
+    display: none;
+  }
+
+  .full-width-image {
+    height: auto;
+  }
+
+  .full-width-image .image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px; /* Ändere diesen Wert nach Bedarf für die Höhe des farblosen Übergangs */
+    background: linear-gradient(
+      transparent,
+      white
+    ); /* Hier wird ein Übergang von Weiß nach transparent erstellt */
+    bottom: 7em;
+    z-index: 2;
+  }
+
+  .full-width-image .image {
+    height: 50vh;
+    background-position: center;
+  }
+
+  .transparent-button {
+    position: relative;
+    margin: 0;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .image-overlay {
+    top: 80px;
+    position: relative;
+    /*  text-align: center; */
+    background: none;
+    padding: 10px;
+    top: unset;
+    transform: unset;
+  }
+
+  .image-overlay h2 {
+    font-size: 2.5em;
+    position: relative;
+  }
+
+  .text-container {
+    float: left;
+    flex-direction: column;
+    /* Ändere diesen Wert nach Bedarf für den gewünschten Abstand */
+    text-align: left; /* Zentriere den Text, wenn gewünscht */
+    margin-top: 0;
+    font-size: 3em;
+  }
+
+  .container-roastinfo {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .text-container p {
+    font-size: 1em; /* Ändere diesen Wert nach Bedarf für die Schriftgröße des Textes */
+    color: black; /* Ändere diesen Wert nach Bedarf für die Textfarbe */
+    word-spacing: 40px;
+    margin: 0;
+  }
+
+  .numberone-text-container {
+    float: left;
+    text-align: left;
+    font-size: 3em; /* Ändere diesen Wert nach Bedarf für die Schriftgröße des Textes */
+    text-align: left; /* Zentriere den Text, wenn gewünscht */
+  }
+
+  .numberone-text-container p {
+    font-size: 1em;
+    color: black;
+    word-spacing: 10px;
+  }
+
+  .numbertwo-text-container {
+    .text-container {
+      font-size: 50px;
+    }
+
+    .numbertwo-text-container p {
+      font-size: 1em;
+      color: black;
+      word-spacing: 10px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .second-text {
+    font-family: "Deine zweite Schrift", verdana;
+    font-size: 1em; /* Beispielgröße, anpassen nach Bedarf */
+    color: black; /* Beispiel-Farbe, anpassen nach Bedarf */
+    font-weight: lighter;
+    word-spacing: 2em;
+    font-size: 30px;
+    flex-direction: column;
+  }
+  .second-text p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 9px 0 9px 0;
+  }
+  .content-container {
+    margin-top: 30px;
+    max-width: 300px;
+    font-size: 1em;
+    font-family: Verdana;
+    color: #575757;
+  }
+
+  /*.centered-image-container {
+   
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    max-width: none;
+    display: block;
+    position: relative;
+
+}  */
+
+  .centered-image-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    position: relative;
+  }
+
+  .centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: none; /* Breite des Bildes nicht begrenzen */
+    width: 100%; /* Bildbreite auf 100% setzen */
+  }
+
+  .second-text-container p {
+    margin-top: 5px;
+    max-width: 300px;
+    font-size: 1em;
+    font-family: Verdana;
+    color: #575757;
+  }
+
+  .third-text-container p {
+    margin-top: 10px;
+    max-width: 300px;
+    font-size: 1em;
+    font-family: Verdana;
+    color: #575757;
+  }
+
+  .third-text-container h2 {
+    font-size: 1.5em; /* Beispiel für die Schriftgröße, anpassen nach Bedarf */
+    color: #575757; /* Beispiel für die Schriftfarbe, anpassen nach Bedarf */
+    font-weight: lighter;
+    margin-left: 20px;
+  }
+
+  .fourth-text-container h2 {
+    font-size: 1.5em; /* Beispiel für die Schriftgröße, anpassen nach Bedarf */
+    color: #575757; /* Beispiel für die Schriftfarbe, anpassen nach Bedarf */
+    font-weight: lighter;
+    margin-left: 20px;
+  }
+
+  .fourth-text-container p {
+    margin-top: 10px;
+    max-width: 300px;
+    font-size: 1em;
+    font-family: Verdana;
+    color: #575757;
+  }
+
+  .close {
+    right: 10px;
+    top: 20px;
+  }
+  .overlay {
+    width: 90%;
+    margin: auto !important;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: unset;
+  }
+  .overlay-content {
+    padding: 20px;
+  }
+
+  .first-text-container h3 {
+    font-size: 1.5em; /* Stile für den zweiten Textcontainer */
+    color: black;
+    padding: 20px;
+    /*hier war mal 600px drunter*/
+    width: 100%;
+    font-weight: lighter;
+    margin-top: 200px;
+  }
+
+  .feedback .slide {
+    display: inline-block;
+    flex: 0 0 100%;
+    height: 250px;
+  }
+  .feedback .first-slide {
+    margin-left: 0;
+  }
+}
+
+/* Media query für Tablets */
+@media screen and (max-width: 1024px) {
+  .full-width-image .image {
+    background-position: 35% top;
+  }
+  .overlay {
+    width: 450px;
+    margin: auto !important;
+    padding: 0;
+    top: 0;
+    right: 100px;
+  }
+  .overlay-content {
+    padding: 20px;
+  }
+  .close {
+    right: 10px;
+    top: 20px;
+  }
+}
